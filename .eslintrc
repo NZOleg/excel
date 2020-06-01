@@ -9,7 +9,7 @@
     "semi": "off",
     "arrow-parents": "off",
     "require-jsdoc": "off",
-    "prettier/prettier": "error"
+    "prettier/prettier": "off"
   },
   "plugins": ["prettier"],
   "extends": [
