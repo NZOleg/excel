@@ -1,11 +1,29 @@
 import { ExcelComponent } from '@core/ExcelComponent';
+import { shouldResize } from './table.functions';
+import { resizeHandler } from './table.size';
 import { createTable } from './table.template';
 
 export class Table extends ExcelComponent {
 
-    static className = 'excel__table'
+  static className = 'excel__table'
 
-    toHTML(){
-        return createTable(20)
+  constructor($root) {
+    super($root, {
+      listeners: ['mousedown']
+    })
+  }
+
+  toHTML() {
+    return createTable(20)
+  }
+
+  onMousedown(event) {
+    if (shouldResize(event)) {
+      
+      resizeHandler(this.$root, event)
+
+      }
     }
-}
+  }
+
+
