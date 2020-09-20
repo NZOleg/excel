@@ -3,6 +3,13 @@
 @import '_variables.scss';
 @import '_mixins.scss';
 
+
+@import "header";
+@import "toolbar";
+@import "formula";
+@import "table";
+@import "dashboard";
+
 * {
   margin: 0;
   padding: 0;
